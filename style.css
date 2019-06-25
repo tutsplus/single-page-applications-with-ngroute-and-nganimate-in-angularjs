@@ -1,0 +1,80 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+#mainWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px
+}
+
+#fixedContent{
+    margin-bottom: 50px;
+}
+
+#wrapper{
+    width: 350px;
+}
+
+#routedContent{
+    width: 350px;
+    position: absolute;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: Arial;
+
+    list-style: none;
+    background-color: #cecece;
+    padding: 7px 10px;
+    border-radius: 2px;
+}
+
+/* Page Transitions */
+
+
+
+#routedContent.ng-enter{
+    transform: translateX(-500px);
+    opacity: 0;
+
+    -webkit-transition: all 0.35s cubic-bezier(1,.01,0,.99);
+    -moz-transition: all 0.35s cubic-bezier(1,.01,0,.99);
+    -ms-transition: all 0.35s cubic-bezier(1,.01,0,.99);
+    -o-transition: all 0.35s cubic-bezier(1,.01,0,.99);
+    transition: all 0.35s cubic-bezier(1,.01,0,.99);
+}
+
+#routedContent.ng-enter-active{
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+#routedContent.ng-leave{
+    transform: translateX(0);
+    opacity: 1;
+
+    -webkit-transition: all 0.35s cubic-bezier(1,.01,0,.99);
+    -moz-transition: all 0.35s cubic-bezier(1,.01,0,.99);
+    -ms-transition: all 0.35s cubic-bezier(1,.01,0,.99);
+    -o-transition: all 0.35s cubic-bezier(1,.01,0,.99);
+    transition: all 0.35s cubic-bezier(1,.01,0,.99);
+}
+
+#routedContent.ng-leave-active{
+    transform: translateX(500px);
+    opacity: 0;
+}
+
